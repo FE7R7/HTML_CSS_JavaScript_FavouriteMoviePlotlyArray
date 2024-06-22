@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="images/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.plot.ly/plotly-2.18.0.min.js"></script>
+    <script src="js/plottingDemo.js"></script>
+    <title>Document</title>
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="w3-center">
+        <h1>Plotly Array Example</h1>
+    </header>
+
+    <table>
+        <tr>
+            <td>X data</td>
+            <td><input type="text" id="x-axis" value="Harry Potter, Star Wars, The Hobbit & Lord of the Rings, Dark Knight, Blade" /></td>
+        </tr>
+        <tr>
+            <td>Y data</td>
+            <td><input type="text" id="y-axis" value="8, 9, 6, 3, 3"/></td>
+        </tr>
+        <tr>
+            <td>X Title</td>
+            <td><input type="text" id="x-title" size="20" value="Movies" /></td>
+        </tr>
+        <tr>
+            <td>Y Title</td>
+            <td><input type="text" id="y-title" value="Number of Movies" /></td>
+        </tr>
+        <tr>
+            <td>Chart Title</td>
+            <td><input type="text" id="chart-title" value="My Favourite Movie Boxsets" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="w3-center">
+                <label  id="lineLabel"><b>Line Chart</b></label> <input class="w3-radio" type="radio" name="chart" id="lineChart" onclick = "plottingDemo:updateRadioButton(1)" />
+                <label class="w3-text-blue" id="barLabel"><b>Bar Chart</b></label> <input class="w3-radio" type="radio" name="chart" id="barChart" onclick = "plottingDemo:updateRadioButton(2)" checked />
+                <label id="pieLabel"><b>Pie Chart</b></label><input class="w3-radio" type="radio" name="chart"  id="pieChart" onclick = "plottingDemo:updateRadioButton(3)"/></td>
+        </tr>
+        <tr>
+            <td class="w3-center"><button class="w3-button w3-black" style="width: 200px" id="clear">Clear</button></td>
+            <td class="w3-center"><button class="w3-button w3-black " style="width: 200px" id="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+    <main class=" w3-center" id="plotArea"></main>
+</body>
+
+</html>
